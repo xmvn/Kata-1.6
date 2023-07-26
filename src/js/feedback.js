@@ -21,7 +21,7 @@ export function openCloseFeedback() {
     document.body.style.overflow = ''
   })
 
-  blurSecond.addEventListener('click', () => {
+  blur.addEventListener('click', () => {
     feedback.classList.remove('feedback--opened')
     blur.classList.remove('blur--active')
     document.body.style.overflow = ''
