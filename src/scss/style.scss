@@ -1,17 +1,42 @@
-$bgColor: #24292e;
-$text: #fff;
+@import '~normalize.css';
+@import '~swiper/swiper-bundle.css';
+@import '_vars';
+@import '_fonts';
+@import '_swiper';
+@import '_body';
+@import '_button';
+@import '_show-more';
+@import '_blur';
+@import '_submit';
+@import '_action-buttons';
+@import '_info';
+@import '_nav';
+@import '_card';
+@import '_logo-img';
+@import 'header/_header';
+@import 'modals/_menu';
+@import 'modals/_feedback';
+@import 'modals/_call';
+@import 'main/_main';
+@import 'main/_slide-menu';
+@import 'main/_brands';
+@import 'main/_content';
+@import 'main/_types';
+@import 'main/_cards';
+@import 'main/_title';
+@import 'main/_prices';
+@import 'main/_table';
+@import 'main/_footer';
 
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-body {
-  padding: 1rem;
-  margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: $bgColor;
-  color: $text;
+a:hover,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
 }
