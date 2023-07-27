@@ -37,7 +37,9 @@
 
 .card:hover > .types__button {
   background-color: rgba($color: $btn-color, $alpha: 0.25);
-  transition: transform 0.25s ease, background-color 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease;
 }
 
 @media (min-width: $breakpoint-m) {
