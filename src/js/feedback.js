@@ -1,8 +1,10 @@
 const openFeedbackBtn = document.querySelectorAll('.action-buttons__chat')
 const closeFeedbackBtn = document.querySelector('.feedback__close-btn')
-const feedback = document.querySelector('.feedback')
+export const feedback = document.querySelector('.feedback')
 const feedbackContainer = document.querySelector('.feedback__container')
 const blur = document.querySelector('.blur')
+import { call } from './call'
+import { menu } from './menu'
 
 export function openCloseFeedback() {
   for (let i = 0; i < openFeedbackBtn.length; i++) {
@@ -17,7 +19,12 @@ export function openCloseFeedback() {
 
   closeFeedbackBtn.addEventListener('click', () => {
     feedback.classList.remove('feedback--opened')
-    blur.classList.remove('blur--active')
+    if (
+      !call.classList.contains('call--opened') &&
+      !menu.classList.contains('menu--opened')
+    ) {
+      blur.classList.remove('blur--active')
+    }
     document.body.style.overflow = ''
   })
 

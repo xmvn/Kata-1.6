@@ -1,7 +1,9 @@
 const openMenuBtn = document.querySelector('.header__burger')
 const closeMenuBtn = document.querySelector('.header__close-btn')
-const menu = document.querySelector('.menu')
+export const menu = document.querySelector('.menu')
 const blur = document.querySelector('.blur')
+import { call } from './call'
+import { feedback } from './feedback'
 
 export function openCloseMenu() {
   openMenuBtn.addEventListener('click', () => {
@@ -12,7 +14,12 @@ export function openCloseMenu() {
 
   closeMenuBtn.addEventListener('click', () => {
     menu.classList.remove('menu--opened')
-    blur.classList.remove('blur--active')
+    if (
+      !call.classList.contains('call--opened') &&
+      !feedback.classList.contains('feedback--opened')
+    ) {
+      blur.classList.remove('blur--active')
+    }
     document.body.style.overflow = ''
   })
 
